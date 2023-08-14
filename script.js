@@ -16,13 +16,13 @@ new CircleType(document.getElementById('circle1'));
 window.addEventListener('DOMContentLoaded', (event) => {
     const text = document.querySelector('.content p');
     const content = text.textContent;
-    const characters = content.split('');
+    const words = content.split(' ');
   
     text.innerHTML = ''; // Clear the original content
   
-    characters.forEach((char, index) => {
+    words.forEach((word, index) => {
       const span = document.createElement('span');
-      span.textContent = char;
+      span.textContent = word + ' ';
       span.style.animationDelay = `${index * 0.02}s`;
       span.style.background = 'linear-gradient(rgb(184, 255, 184), rgb(113, 170, 122))';
       span.style.webkitTextFillColor = 'transparent';
